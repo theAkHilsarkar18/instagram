@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/screens/basescreen/provider/baseprovider.dart';
+import 'package:instagram/screens/profilescreen/view/profilescreen.dart';
 import 'package:instagram/screens/searchscreen/view/searchscreen.dart';
 import 'package:provider/provider.dart';
 
@@ -35,7 +36,7 @@ class _BasescreenState extends State<Basescreen> {
             BottomNavigationBarItem(icon: Icon(Icons.person,color: Colors.black),label: "Profile"),
           ],
         ),
-        body: Searchscreen(),
+        body: Profilescreen(),
       ),
     );
   }

@@ -4,7 +4,6 @@ import 'package:instagram/screens/searchscreen/provider/searchprovider.dart';
 import 'package:provider/provider.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-
 class Searchscreen extends StatefulWidget {
   const Searchscreen({Key? key}) : super(key: key);
 
@@ -19,36 +18,220 @@ class _SearchscreenState extends State<Searchscreen> {
     Searchprovider searchproviderTrue = Provider.of(context, listen: true);
     return SafeArea(
       child: Scaffold(
+        body: ListView.builder(
+            itemBuilder: (context, index) => SuperStarLink(), itemCount:1),
       ),
+    );
+  }
+
+  Widget SuperStarLink() {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    postBox(),
+                    postBox(),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    postBox(),
+                    postBox(),
+                  ],
+                ),
+              ],
+            ),
+            postBox2(),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            postBox2(),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    postBox(),
+                    postBox(),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    postBox(),
+                    postBox(),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            postBox3(),
+            Column(
+              children: [
+                postBox(),
+                postBox(),
+              ],
+            ),
+          ],
+        ),
+        Column(
+          children: [
+            Row(
+              children: [
+                postBox(),
+                postBox(),
+                postBox(),
+              ],
+            ),
+            Row(
+              children: [
+                postBox(),
+                postBox(),
+                postBox(),
+              ],
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget Starlink1() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                postBox(),
+                postBox(),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                postBox(),
+                postBox(),
+              ],
+            ),
+          ],
+        ),
+        postBox2(),
+      ],
+    );
+  }
+
+  Widget Starlink2() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        postBox2(),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                postBox(),
+                postBox(),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                postBox(),
+                postBox(),
+              ],
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget Starlink3() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        postBox3(),
+        Column(
+          children: [
+            postBox(),
+            postBox(),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget Starlink4() {
+    return Column(
+      children: [
+        Row(
+          children: [
+            postBox(),
+            postBox(),
+            postBox(),
+          ],
+        ),
+        Row(
+          children: [
+            postBox(),
+            postBox(),
+            postBox(),
+          ],
+        ),
+      ],
     );
   }
 
   Widget postBox() {
     return Container(
-      height: 100,
-      width: 100,
-      color: Colors.yellow,
-    );
-  }
-  Widget postBox2() {
-    return Container(
-      height: 200,
-      width: 100,
-      color: Colors.yellow,
+      padding: EdgeInsets.all(5),
+      height: 120,
+      width: 120,
+      decoration: BoxDecoration(color: Colors.yellow),
+      alignment: Alignment.center,
+      child: Image.asset("assets/logo/logo.png", fit: BoxFit.cover),
     );
   }
 
-  List<String> imageList = [
-    'https://cdn.pixabay.com/photo/2019/03/15/09/49/girl-4056684_960_720.jpg',
-    'https://cdn.pixabay.com/photo/2020/12/15/16/25/clock-5834193__340.jpg',
-    'https://cdn.pixabay.com/photo/2020/09/18/19/31/laptop-5582775_960_720.jpg',
-    'https://media.istockphoto.com/photos/woman-kayaking-in-fjord-in-norway-picture-id1059380230?b=1&k=6&m=1059380230&s=170667a&w=0&h=kA_A_XrhZJjw2bo5jIJ7089-VktFK0h0I4OWDqaac0c=',
-    'https://cdn.pixabay.com/photo/2019/11/05/00/53/cellular-4602489_960_720.jpg',
-    'https://cdn.pixabay.com/photo/2017/02/12/10/29/christmas-2059698_960_720.jpg',
-    'https://cdn.pixabay.com/photo/2020/01/29/17/09/snowboard-4803050_960_720.jpg',
-    'https://cdn.pixabay.com/photo/2020/02/06/20/01/university-library-4825366_960_720.jpg',
-    'https://cdn.pixabay.com/photo/2020/11/22/17/28/cat-5767334_960_720.jpg',
-    'https://cdn.pixabay.com/photo/2020/12/13/16/22/snow-5828736_960_720.jpg',
-    'https://cdn.pixabay.com/photo/2020/12/09/09/27/women-5816861_960_720.jpg',
-  ];
+  Widget postBox3() {
+    return Container(
+      padding: EdgeInsets.all(5),
+      height: 240,
+      width: 240,
+      decoration: BoxDecoration(color: Colors.yellow),
+      alignment: Alignment.center,
+      child: Image.asset("assets/logo/logo.png", fit: BoxFit.cover),
+    );
+  }
+
+  Widget postBox2() {
+    return Container(
+      padding: EdgeInsets.all(5),
+      height: 240,
+      width: 120,
+      color: Colors.yellow,
+      child: Image.asset("assets/logo/logo2.jpg", fit: BoxFit.cover),
+    );
+  }
 }
