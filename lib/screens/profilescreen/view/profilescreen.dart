@@ -72,7 +72,7 @@ class _ProfilescreenState extends State<Profilescreen> {
                       ),
                       Column(
                         children: [
-                          Text("196",
+                          Text("6",
                               style:
                                   TextStyle(fontSize: 18, color: Colors.black)),
                           Text("Posts",
@@ -85,7 +85,7 @@ class _ProfilescreenState extends State<Profilescreen> {
                       ),
                       Column(
                         children: [
-                          Text("97",
+                          Text("97M",
                               style:
                                   TextStyle(fontSize: 18, color: Colors.black)),
                           Text("Followers",
@@ -241,6 +241,7 @@ class _ProfilescreenState extends State<Profilescreen> {
                       ],
                     ),
                   ),
+                  SizedBox(height: 10,),
                   Container(
                     height: 360,
                     width: double.infinity,

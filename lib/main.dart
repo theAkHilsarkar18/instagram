@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:instagram/screens/basescreen/provider/baseprovider.dart';
 import 'package:instagram/screens/basescreen/view/basescreen.dart';
+import 'package:instagram/screens/postscreen/provider/postprovider.dart';
 import 'package:instagram/screens/postscreen/view/postscreen.dart';
 import 'package:instagram/screens/profilescreen/provider/profileprovider.dart';
 import 'package:instagram/screens/searchscreen/provider/searchprovider.dart';
@@ -24,6 +25,7 @@ void main() {
         ChangeNotifierProvider(
           create: (context) => Profileprovider(),
         ),
+        ChangeNotifierProvider(create: (context) => Postprovider(),),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
