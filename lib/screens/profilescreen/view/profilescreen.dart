@@ -24,220 +24,241 @@ class _ProfilescreenState extends State<Profilescreen> {
         child: Scaffold(
           body: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: ListView(
-              physics: BouncingScrollPhysics(),
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          "theakhilsarkar",
-                          style: GoogleFonts.poppins(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 20),
-                        ),
-                        Spacer(),
-                        Icon(Icons.add_box_outlined, color: Colors.black, size: 30),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Icon(Icons.menu, size: 30, color: Colors.black),
-                        SizedBox(
-                          width: 5,
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 5,
-                        ),
-                        CircleAvatar(
-                          radius: 50,
-                          backgroundImage: AssetImage("assets/post/p1.jpg"),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Column(
-                          children: [
-                            Text("196",
-                                style: TextStyle(fontSize: 18, color: Colors.black)),
-                            Text("Posts",
-                                style: GoogleFonts.actor(
-                                    fontSize: 14, color: Colors.black)),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 15,
-                        ),
-                        Column(
-                          children: [
-                            Text("97",
-                                style: TextStyle(fontSize: 18, color: Colors.black)),
-                            Text("Followers",
-                                style: GoogleFonts.actor(
-                                    fontSize: 14, color: Colors.black)),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 15,
-                        ),
-                        Column(
-                          children: [
-                            Text("92",
-                                style: TextStyle(fontSize: 18, color: Colors.black)),
-                            Text("Following",
-                                style: GoogleFonts.actor(
-                                    fontSize: 14, color: Colors.black)),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 5, right: 5),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        "theakhilsarkar",
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20),
+                      ),
+                      Spacer(),
+                      Icon(Icons.add_box_outlined,
+                          color: Colors.black, size: 30),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Icon(Icons.menu, size: 30, color: Colors.black),
+                      SizedBox(
+                        width: 5,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 5,
+                      ),
+                      CircleAvatar(
+                        radius: 50,
+                        backgroundImage: AssetImage("assets/post/p1.jpg"),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Column(
                         children: [
-                          Text("TheAkhilSarkar",
-                              style: GoogleFonts.poppins(
-                                  color: Colors.black, fontWeight: FontWeight.w600)),
-                          Text("Director | Developer 🥇",
-                              style: GoogleFonts.poppins(
-                                color: Colors.black,
-                              )),
-                          Text("Flutter App Devloper 🔥",
-                              style: GoogleFonts.poppins(
-                                color: Colors.black,
-                              )),
-                          Text("Login in Earth 19 March 🎂 ",
-                              style: GoogleFonts.poppins(
-                                color: Colors.black,
-                              )),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Container(
-                          height: 35,
-                          width: 290,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          alignment: Alignment.center,
-                          child: Text("Edit profile",
+                          Text("196",
                               style:
-                                  GoogleFonts.poppins(fontWeight: FontWeight.w500)),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                          height: 35,
-                          width: 35,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          alignment: Alignment.center,
-                          child: Icon(Icons.person_add),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          "Discover people",
-                          style: GoogleFonts.poppins(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15),
-                        ),
-                        Spacer(),
-                        Text(
-                          "See all",
-                          style: GoogleFonts.poppins(
-                              color: Colors.blue,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      height: 260,
-                      width: double.infinity,
-                      child: ListView.builder(
-                        physics: BouncingScrollPhysics(),
-                        itemBuilder: (context, index) => DiscoverBox(
-                            profileproviderTrue!.profileSuggestionFollowerImg[index],
-                            profileproviderTrue!.profileSuggestionFollowerName[index],
-                            profileproviderTrue!
-                                .profileSuggestionFollowerDescription[index],
-                          profileproviderTrue!.celebretyTik[index]
-                        ),
-                        itemCount:
-                            profileproviderTrue!.profileSuggestionFollowerImg.length,
-                        shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                      ),
-                    ),
-                    Container(
-                      height: 60,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                      ),
-                      child: TabBar(
-                        indicatorColor: Colors.black,
-                        tabs: [
-                          Tab(
-                            icon: Icon(Icons.grid_on,color: Colors.black,size: 30),
-                          ),
-                          Tab(
-                            icon: Icon(Icons.account_box_outlined,size: 30,color: Colors.black),
-                          ),
+                                  TextStyle(fontSize: 18, color: Colors.black)),
+                          Text("Posts",
+                              style: GoogleFonts.actor(
+                                  fontSize: 14, color: Colors.black)),
                         ],
                       ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Column(
+                        children: [
+                          Text("97",
+                              style:
+                                  TextStyle(fontSize: 18, color: Colors.black)),
+                          Text("Followers",
+                              style: GoogleFonts.actor(
+                                  fontSize: 14, color: Colors.black)),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Column(
+                        children: [
+                          Text("92",
+                              style:
+                                  TextStyle(fontSize: 18, color: Colors.black)),
+                          Text("Following",
+                              style: GoogleFonts.actor(
+                                  fontSize: 14, color: Colors.black)),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 5, right: 5),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("TheAkhilSarkar",
+                            style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w600)),
+                        Text("Director | Developer 🥇",
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                            )),
+                        Text("Flutter App Devloper 🔥",
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                            )),
+                        Text("Login in Earth 19 March 🎂 ",
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                            )),
+                      ],
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        height: 35,
+                        width: 290,
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        alignment: Alignment.center,
+                        child: Text("Edit profile",
+                            style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w500)),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                        height: 35,
+                        width: 35,
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        alignment: Alignment.center,
+                        child: Icon(Icons.person_add),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        "Discover people",
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 15),
+                      ),
+                      Spacer(),
+                      Text(
+                        "See all",
+                        style: GoogleFonts.poppins(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 15),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 260,
+                    width: double.infinity,
+                    child: ListView.builder(
+                      physics: BouncingScrollPhysics(),
+                      itemBuilder: (context, index) => DiscoverBox(
+                          profileproviderTrue!
+                              .profileSuggestionFollowerImg[index],
+                          profileproviderTrue!
+                              .profileSuggestionFollowerName[index],
+                          profileproviderTrue!
+                              .profileSuggestionFollowerDescription[index],
+                          profileproviderTrue!.celebretyTik[index]),
+                      itemCount: profileproviderTrue!
+                          .profileSuggestionFollowerImg.length,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                    ),
+                  ),
+                  Container(
+                    height: 60,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                    ),
+                    child: TabBar(
+                      indicatorColor: Colors.black,
+                      tabs: [
+                        Tab(
+                          icon: Icon(Icons.grid_on,
+                              color: Colors.black, size: 30),
+                        ),
+                        Tab(
+                          icon: Icon(Icons.account_box_outlined,
+                              size: 30, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 360,
+                    width: double.infinity,
+                    child: GridView.builder(
+                      physics: BouncingScrollPhysics(),
+                      shrinkWrap: true,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                      ),
+                      itemBuilder: (context, index) => InkWell(onTap: () {
+                        Navigator.pushNamed(context, 'post');
+                      },child: postBox(profileproviderTrue!.ProfilePostImg[index])),
+                      itemCount: 6,
+                    ),
+                  )
+                ],
+              ),
+              physics: BouncingScrollPhysics(),
             ),
           ),
           backgroundColor: Colors.white,
@@ -246,8 +267,18 @@ class _ProfilescreenState extends State<Profilescreen> {
     );
   }
 
+  Widget postBox(String postImg) {
+    return Container(
+      margin: EdgeInsets.all(1),
+      height: 120,
+      width: 120,
+      color: Colors.teal,
+      child: Image.asset("$postImg", fit: BoxFit.cover),
+    );
+  }
+
   Widget DiscoverBox(
-      String profileImg, String profileName, String description,bool tik) {
+      String profileImg, String profileName, String description, bool tik) {
     return Stack(
       alignment: Alignment.topRight,
       children: [
@@ -281,8 +312,15 @@ class _ProfilescreenState extends State<Profilescreen> {
                     style: GoogleFonts.poppins(
                         color: Colors.black, fontWeight: FontWeight.w500),
                   ),
-                  SizedBox(width: 5,),
-                  tik?Image.asset("assets/sugestion/tik.png",height: 15,):Text(" "),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  tik
+                      ? Image.asset(
+                          "assets/sugestion/tik.png",
+                          height: 15,
+                        )
+                      : Text(" "),
                 ],
               ),
               SizedBox(

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:instagram/screens/basescreen/provider/baseprovider.dart';
 import 'package:instagram/screens/basescreen/view/basescreen.dart';
+import 'package:instagram/screens/postscreen/view/postscreen.dart';
 import 'package:instagram/screens/profilescreen/provider/profileprovider.dart';
 import 'package:instagram/screens/searchscreen/provider/searchprovider.dart';
 import 'package:instagram/screens/searchscreen/view/searchscreen.dart';
@@ -28,10 +29,12 @@ void main() {
         debugShowCheckedModeBanner: false,
         routes: {
           '/': (context) => Spleshscreen(),
+          'splesh': (context) => Spleshscreen(),
           'signin': (context) => SigninScreen(),
           'signup': (context) => SignupScreen(),
           'base': (context) => Basescreen(),
           'search': (context) => Searchscreen(),
+          'post': (context) => Postscreen(),
         },
       ),
     ),
@@ -48,9 +51,12 @@ class Spleshscreen extends StatefulWidget {
 class _SpleshscreenState extends State<Spleshscreen> {
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, 'signin');
-    });
+    Timer(
+      Duration(seconds: 3),
+      () {
+        Navigator.pushReplacementNamed(context, 'signin');
+      },
+    );
 
     return SafeArea(
       child: Scaffold(
