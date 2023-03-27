@@ -19,7 +19,9 @@ class _SearchscreenState extends State<Searchscreen> {
     return SafeArea(
       child: Scaffold(
         body: ListView.builder(
-            itemBuilder: (context, index) => SuperStarLink(), itemCount:1),
+          itemBuilder: (context, index) => SuperStarLink(),
+          itemCount: 1,
+        ),
       ),
     );
   }
