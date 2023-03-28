@@ -29,7 +29,7 @@ class _ProfilescreenState extends State<Profilescreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Row(
                     children: [
@@ -42,6 +42,11 @@ class _ProfilescreenState extends State<Profilescreen> {
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
                             fontSize: 20),
+                      ),
+                      SizedBox(width: 5,),
+                      Image.asset(
+                        "assets/sugestion/tik.png",
+                        height: 20,
                       ),
                       Spacer(),
                       Icon(Icons.add_box_outlined,
