@@ -93,6 +93,7 @@ class _SigninScreenState extends State<SigninScreen> {
                       Map m1 = await spc.readSharedPreference();
                       if(userId == m1['id1'] && password == m1['ps1'])
                       {
+                        spc.createSharedPreference(userId, password,true);
                         Navigator.pushNamed(context, 'base');
                       }
                       else

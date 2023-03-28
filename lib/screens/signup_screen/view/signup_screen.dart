@@ -152,7 +152,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       String password = txtPassword.text;
                       String confirmPassword = txtConfirmPassword.text;
                       SharedPreferenceClass spc = SharedPreferenceClass();
-                      spc.createSharedPreference(userId, password);
+                      spc.createSharedPreference(userId, password,false);
                       Navigator.pop(context);
                     },
                     child: Container(

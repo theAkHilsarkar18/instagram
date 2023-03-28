@@ -18,222 +18,60 @@ class _SearchscreenState extends State<Searchscreen> {
     Searchprovider searchproviderTrue = Provider.of(context, listen: true);
     return SafeArea(
       child: Scaffold(
-        body: ListView.builder(
-          itemBuilder: (context, index) => SuperStarLink(),
-          itemCount: 1,
+        body: GridView.custom(
+          gridDelegate: SliverQuiltedGridDelegate(
+            crossAxisCount: 4,
+            mainAxisSpacing: 2,
+            crossAxisSpacing: 2,
+            repeatPattern: QuiltedGridRepeatPattern.inverted,
+            pattern: [
+              QuiltedGridTile(2, 2),
+              QuiltedGridTile(1, 1),
+              QuiltedGridTile(1, 1),
+              QuiltedGridTile(1, 1),
+              QuiltedGridTile(1, 1),
+            ],
+          ),
+          childrenDelegate: SliverChildBuilderDelegate(
+                (context, index) => Image.asset("${searchproviderTrue.searchImgList[index]}",fit: BoxFit.cover),
+          ),
+          physics: BouncingScrollPhysics(),
+
+
         ),
       ),
     );
   }
 
-  Widget SuperStarLink() {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    postBox(),
-                    postBox(),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    postBox(),
-                    postBox(),
-                  ],
-                ),
-              ],
-            ),
-            postBox2(),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            postBox2(),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    postBox(),
-                    postBox(),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    postBox(),
-                    postBox(),
-                  ],
-                ),
-              ],
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            postBox3(),
-            Column(
-              children: [
-                postBox(),
-                postBox(),
-              ],
-            ),
-          ],
-        ),
-        Column(
-          children: [
-            Row(
-              children: [
-                postBox(),
-                postBox(),
-                postBox(),
-              ],
-            ),
-            Row(
-              children: [
-                postBox(),
-                postBox(),
-                postBox(),
-              ],
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget Starlink1() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                postBox(),
-                postBox(),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                postBox(),
-                postBox(),
-              ],
-            ),
-          ],
-        ),
-        postBox2(),
-      ],
-    );
-  }
-
-  Widget Starlink2() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        postBox2(),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                postBox(),
-                postBox(),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                postBox(),
-                postBox(),
-              ],
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget Starlink3() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        postBox3(),
-        Column(
-          children: [
-            postBox(),
-            postBox(),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget Starlink4() {
-    return Column(
-      children: [
-        Row(
-          children: [
-            postBox(),
-            postBox(),
-            postBox(),
-          ],
-        ),
-        Row(
-          children: [
-            postBox(),
-            postBox(),
-            postBox(),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget postBox() {
+  Widget postBox(String imgPath) {
     return Container(
       padding: EdgeInsets.all(5),
       height: 120,
       width: 120,
-      decoration: BoxDecoration(color: Colors.yellow),
+      decoration: BoxDecoration(color: Colors.green),
       alignment: Alignment.center,
-      child: Image.asset("assets/logo/logo.png", fit: BoxFit.cover),
+      child: Image.asset("$imgPath", fit: BoxFit.fitHeight),
     );
   }
 
-  Widget postBox3() {
+  Widget postBox3(String imgPath3) {
     return Container(
       padding: EdgeInsets.all(5),
       height: 240,
       width: 240,
       decoration: BoxDecoration(color: Colors.yellow),
       alignment: Alignment.center,
-      child: Image.asset("assets/logo/logo.png", fit: BoxFit.cover),
+      child: Image.asset("${imgPath3}", fit: BoxFit.cover),
     );
   }
 
-  Widget postBox2() {
+  Widget postBox2(String imgPath2) {
     return Container(
       padding: EdgeInsets.all(5),
       height: 240,
       width: 120,
       color: Colors.yellow,
-      child: Image.asset("assets/logo/logo2.jpg", fit: BoxFit.cover),
+      child: Image.asset("${imgPath2}", fit: BoxFit.cover),
     );
   }
 }

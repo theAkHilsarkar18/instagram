@@ -36,7 +36,7 @@ class _BasescreenState extends State<Basescreen> {
             BottomNavigationBarItem(icon: Icon(Icons.person,color: Colors.black),label: "Profile"),
           ],
         ),
-        body: Profilescreen(),
+        body: baseproviderTrue.screenList[baseproviderTrue.currentNavigationIndex],
       ),
     );
   }

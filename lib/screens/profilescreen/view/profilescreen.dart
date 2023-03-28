@@ -85,7 +85,7 @@ class _ProfilescreenState extends State<Profilescreen> {
                       ),
                       Column(
                         children: [
-                          Text("97M",
+                          Text("397M",
                               style:
                                   TextStyle(fontSize: 18, color: Colors.black)),
                           Text("Followers",

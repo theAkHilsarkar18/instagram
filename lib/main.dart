@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:instagram/screens/basescreen/provider/baseprovider.dart';
@@ -6,10 +7,12 @@ import 'package:instagram/screens/basescreen/view/basescreen.dart';
 import 'package:instagram/screens/postscreen/provider/postprovider.dart';
 import 'package:instagram/screens/postscreen/view/postscreen.dart';
 import 'package:instagram/screens/profilescreen/provider/profileprovider.dart';
+import 'package:instagram/screens/profilescreen/view/profilescreen.dart';
 import 'package:instagram/screens/searchscreen/provider/searchprovider.dart';
 import 'package:instagram/screens/searchscreen/view/searchscreen.dart';
 import 'package:instagram/screens/signin_screen/view/signins_creen.dart';
 import 'package:instagram/screens/signup_screen/view/signup_screen.dart';
+import 'package:instagram/utils/SharedPreferenceClass/shared_preference_class.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -32,6 +35,7 @@ void main() {
         routes: {
           '/': (context) => Spleshscreen(),
           'splesh': (context) => Spleshscreen(),
+          'profile': (context) => Profilescreen(),
           'signin': (context) => SigninScreen(),
           'signup': (context) => SignupScreen(),
           'base': (context) => Basescreen(),
@@ -53,10 +57,12 @@ class Spleshscreen extends StatefulWidget {
 class _SpleshscreenState extends State<Spleshscreen> {
   @override
   Widget build(BuildContext context) {
+
+
     Timer(
       Duration(seconds: 3),
       () {
-        Navigator.pushReplacementNamed(context, 'signin');
+        loginCheck();
       },
     );
 
@@ -68,5 +74,21 @@ class _SpleshscreenState extends State<Spleshscreen> {
         ),
       ),
     );
+  }
+
+  Future<void> loginCheck()
+  async {
+    SharedPreferenceClass spc = SharedPreferenceClass();
+    Map m1 = await spc.readSharedPreference();
+    print("${m1['b1']}------------------------");
+
+    if(m1['b1']==true)
+      {
+        Navigator.pushReplacementNamed(context, 'base');
+      }
+    else
+      {
+        Navigator.pushReplacementNamed(context, 'signin');
+      }
   }
 }

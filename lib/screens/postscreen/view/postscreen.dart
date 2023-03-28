@@ -99,13 +99,13 @@ class _PostscreenState extends State<Postscreen> {
             children: [
               CircleAvatar(
                   radius: 10,
-                  backgroundImage: AssetImage("assets/sugestion/raj.jpg")),
+                  backgroundImage: AssetImage("assets/sugestion/19.jpg")),
               CircleAvatar(
                   radius: 10,
-                  backgroundImage: AssetImage("assets/sugestion/vidit.jpg")),
+                  backgroundImage: AssetImage("assets/sugestion/22.jpg")),
               CircleAvatar(
                   radius: 10,
-                  backgroundImage: AssetImage("assets/sugestion/prina.jpg")),
+                  backgroundImage: AssetImage("assets/sugestion/18.jpg")),
               SizedBox(
                 width: 5,
               ),
